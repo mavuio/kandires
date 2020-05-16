@@ -1,0 +1,43 @@
+defmodule KandiresWeb.Components.NumericInput do
+  use Surface.LiveComponent
+
+  @doc "max value of the dialog"
+  property(max, :integer, required: false, default: 10)
+
+  data(amount, :integer, default: false)
+
+  def render(assigns) do
+    ~H"""
+    <div class={{ "modal", isActive: @show }}>
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">{{ @title }}</p>
+        </header>
+        <section class="modal-card-body">
+          {{ @inner_content.() }}
+        </section>
+        <footer class="modal-card-foot" style="justify-content: flex-end">
+          <Button click="hide">Ok</Button>
+        </footer>
+      </div>
+    </div>
+    """
+  end
+
+  # Public API
+
+  def show(dialog_id) do
+    send_update(__MODULE__, id: dialog_id, show: true)
+  end
+
+  # Event handlers
+
+  def handle_event("show", _, socket) do
+    {:noreply, assign(socket, show: true)}
+  end
+
+  def handle_event("hide", _, socket) do
+    {:noreply, assign(socket, show: false)}
+  end
+end

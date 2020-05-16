@@ -1,0 +1,40 @@
+<div class="checkout-wrap">
+
+    <h2>
+        Anmeldung zur Wahl
+    </h2>
+
+
+    <%= f = form_for :form_data, "#", [ phx_submit: :check_mglnr] %>
+
+    <%= if @login_msg do %>
+
+    <div class="alert alert-danger">
+    	<%= @login_msg %>
+
+    </div>
+    <% end %>
+
+
+
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="mglnr" placeholder="Mitglieds-Nr"
+            aria-label="do you have a promo-code?">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">OK</button>
+        </div>
+    </div>
+
+
+    </form>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+    <small>
+        Systemvorraussetzungen: (aktueller Firefox, Google Chrome, Safari, Internet Explorer ab Version 11)
+    </small>
+
+
+
+</div>

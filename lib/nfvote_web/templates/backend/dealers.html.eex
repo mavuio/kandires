@@ -1,0 +1,21 @@
+<h1 class="title is-3">Dealers </h1>
+
+
+<div class="section grid-button-header">
+  <button class="button is-info" onClick="window.vm.$refs.main.addItem(-1);">
+    <i class='fal fa-plus fa-fw'></i>
+    <span>add</span>
+  </button>
+</div>
+
+<div id="app" data-route="/generic" data-table="dealer" data-dataview="list_all" data-editable="1"
+  data-allow_delete="multiple" data-allow_add="1" data-coldefs='[
+      { field: "id", editable: false },
+      { field: "title", editable: true },
+    ]'></div>
+<script src="<%= vue_cli(@conn, "/engine/datagrid/js/chunk-vendors.js") %>">
+</script>
+<script src="<%= vue_cli(@conn, "/engine/datagrid/js/app.js") %>">
+</script>
+</div>
+</div>

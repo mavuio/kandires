@@ -1,0 +1,175 @@
+<div class="checkout-wrap">
+
+  <h2>2/4 Wahlvorschlag der Naturfreunde OÖ: 2020 – 2023</h2>
+
+  <%= f = form_for @changeset, "#", [as: :step_data, phx_change: :validate, phx_submit: :save] %>
+
+
+  <h3>Landesvorsitzende:</h3>
+  <%= tableify ~S(  |Gerda Weichsler-Hauer *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_01}) %>
+
+  <h3>Vorsitzende – Stv.:</h3>
+  <%= tableify ~S(  |Leopold Pichlbauer *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_02}) %>
+
+  <h3>Finanzreferent:</h3>
+  <%= tableify ~S(  |Sabine Hinum *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_03}) %>
+
+  <h3>Finanzreferent – Stv.:</h3>
+  <%= tableify ~S(  |Christian Kremeier *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_04}) %>
+
+  <h3>Schriftführer:</h3>
+  <%= tableify ~S(  |Manfred Spitzbart *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_05}) %>
+
+  <h3>Schriftführer – Stv.:</h3>
+  <%= tableify ~S(  |Eva Hörtenhuber *) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_06}) %>
+
+
+  <h3> Rechnungsprüfer:</h3>
+
+  <%= tableify ~S(
+Rechnungsprüfer:|Andreas De Bettin
+Rechnungsprüfer:|Staufer Hans
+Rechnungsprüfer:|Gerold Musenbichler
+Ersatzmitglied: |Reinhard Rammerstorfer
+Ersatzmitglied: |Bruno Steiner
+   ) %>
+
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_07}) %>
+
+
+  <h3>
+    Gebietsvorsitzende:
+  </h3>
+  <%= tableify ~S(
+Innviertel:| Hermann Keindl *
+Kirchdorf:| Werner Grassegger *
+Mühlviertel:| Leopold Pichlbauer *
+Salzkammergut:| Manfred Spitzbart *
+Vöcklabruck:| Florian Zahler *
+Linz-Land:| Leopold Enzlberger *
+Steyr-Land:| Gerhard Nömayr *
+) %>
+
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_08}) %>
+
+  <h3>
+    Referate:
+  </h3>
+
+  <%= tableify ~S(
+Alpinistengilde/ Aus- u. Fortbildung: |         Peter Klaffenböck *
+| Georg Link
+Alpin- u. Höhenmedizin/ Rettungswesen: |         Richard Schnelzer
+| Stefan Redl *
+Bergsteigen/ -gesamt: |         Paul Mistlbacher *
+-Jungbergsteigen: |         Michael Bräuer
+EDV: |         Bruno Steiner *
+Foto: |         Christine Steinleitner *
+Hütten u. Wege: |         Manfred Spitzbart *
+| Erwin Zeppetzauer
+Jugend: |         Katharina Kremeier *
+Langlauf: |         Herbert Schöttl *
+Öffentlichkeitsarbeit u. Social Media: |         Katharina Kremeier *
+Orientierungslauf: |         Alois Mair *
+Radsport / |
+&nbsp;&nbsp;&nbsp;&nbsp;- Jugend: |         Monika Dorfner *
+&nbsp;&nbsp;&nbsp;&nbsp;- Mountainbike: |         Friedrich Irauschek
+Schneesport: |         Norbert Breitschopf *
+Skitouren / |
+&nbsp;&nbsp;&nbsp;&nbsp;- Skitouristik u. Öffentlichkeitsarbeit: |         Helmuth Preslmaier *
+&nbsp;&nbsp;&nbsp;&nbsp;- Aus- und Fortbildungen: |         Robert Winter
+Sportklettern / |
+&nbsp;&nbsp;&nbsp;&nbsp;- Breitensport: |         Alexander Eder *
+&nbsp;&nbsp;&nbsp;&nbsp;- Spitzen- u. Leistungssport: |         Inge Sterrer
+Wandern / |
+&nbsp;&nbsp;&nbsp;&nbsp;- Bergwandern: |         Philip Rafalt *
+&nbsp;&nbsp;&nbsp;&nbsp;- Schneeschuhwandern: |         Günter Hupfer
+Umwelt- u. Naturschutz: |         Sepp Friedhuber *
+) %>
+
+
+  ACHTUNG: Die mit * gekennzeichnete Personen sind stimmberechtigt. In den Fachreferaten wird bei Absenz der mit *
+  gekennzeichneten Personen das Stimmrecht automatisch auf die zweitgenannte Person übertragen!
+
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_09}) %>
+
+
+
+  <h3>
+    Schiedsgericht
+  </h3>
+  <%= tableify ~S(
+    Schiedsgericht:| Harald Maier-Kern
+    |Horst Maringer
+    |Hermann Keindl
+    |Johann Ritt
+    |Andreas De Bettin
+    Ersatzmitglieder:| Reinhard Rammerstorfer
+    |Roitinger Kornelia
+    |Rudolf Starzer
+) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_10}) %>
+
+
+
+  <h3>
+    Nationalpark Kalkalpen
+  </h3>
+  <%= tableify ~S(
+    Kuratoriumsmitglieder:|Gerhard Nömayr
+    |Leopold Enzlberger
+    |Christian Dornauer
+) %>
+
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_11}) %>
+
+
+
+
+  <h3>
+    WAHLVORSCHLAG für die Entsendung in die BUNDESORGANISATION:
+  </h3>
+
+  <%= tableify ~S(
+  Bundesvorsitzender Stv.:| Gerda Weichsler-Hauer
+  Vertreter im Finanzausschuss:| Sabine Hinum
+  Rechnungsprüfer Stv.:| Andreas De Bettin
+  Schiedsgericht:| Leopold Pichlbauer
+) %>
+  <%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_02_12}) %>
+
+
+
+
+
+
+
+
+
+
+
+
+<%= if length(f.errors)==1  do %>
+  <div class="alert alert-warning phx-no-feedback">
+    1 Punkt muss noch beantwortet werden, dieser ist nun rot markiert.
+  </div>
+<% end %>
+<%= if length(f.errors)>1  do %>
+  <div class="alert alert-warning phx-no-feedback">
+    <%= length(f.errors) %> Punkte müssen noch beantwortet werden, diese sind nun rot markiert
+  </div>
+<% end %>
+
+  <div class="step-nav">
+    <a class="btn btn-outline-primary" href="<%=   Kandis.Checkout.get_prev_step_link(assigns , @step) %>"><i
+        class='fal fa-chevron-left'></i>&nbsp; zurück </a>
+    <button class="btn btn-primary" type="submit"><i class='fal fa-chevron-right'></i>&nbsp; weiter </button> </div>
+  </form>
+
+</div>

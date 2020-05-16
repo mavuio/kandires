@@ -1,0 +1,26 @@
+<div class="orderhtml">
+
+    <%= if assigns[:order] do %>
+    <h4>
+         Stimmabgabe  <%= @order.order_nr  |> String.replace("-TEST","") %>
+    </h4>
+    <%= @order.inserted_at  |> KandiresWeb.MyHelpers.format_date() %>
+    <% end %>
+
+    <table class="lineitems table table-striped">
+
+        <%= for i <- @orderdata.lineitems  |> Enum.filter(fn a-> a.type != "total" end) do %>
+        <tr class="lineitem-<%= i.type %>">
+
+            <tr>
+                <td><%=  i.title %></td>
+                <td><%=  i.result %></td>
+            </tr>
+        </tr>
+        <% end %>
+    </table>
+
+
+
+
+</div>

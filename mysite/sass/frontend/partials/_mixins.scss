@@ -1,0 +1,99 @@
+@import "bootstrap_mixins";
+
+@mixin filldiv() {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+// ====================================================================
+@mixin topcontainer() {
+    @include make-container();
+}
+
+
+@mixin ce_inner($num) {
+    .ce-inner {
+        @include ce_width($num);
+        margin-left: 0;
+    }
+}
+
+@mixin ce_width($num) {
+    max-width: $num*$w-col;
+    margin-left: auto;
+    margin-right: auto;
+    // border: 1px solid blue;
+
+}
+
+@mixin ce_outer() {
+    /*keep margins inside */
+    margin-left: auto;
+    margin-right: auto;
+
+    @include ce_width(12);
+    // border: 1px solid red;
+
+}
+
+@mixin mwSetup12GridSpans($layout) {
+    .span-1 {
+        @include span(1 of $layout);
+    }
+
+    .span-2 {
+        @include span(2 of $layout);
+    }
+
+    .span-3 {
+        @include span(3 of $layout);
+    }
+
+    .span-4 {
+        @include span(4 of $layout);
+    }
+
+    .span-5 {
+        @include span(5 of $layout);
+    }
+
+    .span-6 {
+        @include span(6 of $layout);
+    }
+
+    .span-7 {
+        @include span(7 of $layout);
+    }
+
+    .span-8 {
+        @include span(8 of $layout);
+    }
+
+    .span-9 {
+        @include span(9 of $layout);
+    }
+
+    .span-10 {
+        @include span(10 of $layout);
+    }
+
+    .span-11 {
+        @include span(11 of $layout);
+    }
+
+    .span-12 {
+        @include full(of $layout);
+    }
+
+    .omega {
+        @include omega;
+    }
+
+    .alpha {
+        @include alpha;
+    }
+}

@@ -1,0 +1,72 @@
+<h1 class="title">
+    Votes
+</h1>
+
+<table class="table table-striped" style="max-width:300px">
+<tr>
+    <th><a href="<%= Routes.backend_path(@conn,:list_members) %>">Wahlberechtigte</a></th>
+    <td><%= @members |> Enum.count() %></td>
+</tr>
+<tr>
+    <th><a href="<%= Routes.backend_path(@conn,:list_orders) %>">Teilnehmer</a></th>
+    <td><%= @orders |> Enum.count() %></td>
+    <td><%= ((@orders |> Enum.count())  / (@members |> Enum.count()  ))*100 |> format_price() %>%</td>
+
+</tr>
+</table>
+
+<table class="table table-striped">
+<tr>
+<th>Pkt</th>
+<th colspan="2">Ja</th>
+<th colspan="2">Nein</th>
+<th colspan="2">Enthaltung</th>
+<th colspan="2">Ungültig</th>
+</tr>
+<%= for pkt <- @stats do %>
+    <tr>
+        <th><%= pkt.pkt   |> String.replace("pkt_","") |> String.replace("_",".") %> <%= pkt.title %></th>
+        <td>
+        <%= if not is_nil(pkt.sums["Ja"]) do %>
+            <%= pkt.sums["Ja"][:val] %>
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Ja"]) do %>
+            <%= pkt.sums["Ja"][:perc]  |> format_price() %>%
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Nein"]) do %>
+            <%= pkt.sums["Nein"][:val] %>
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Nein"]) do %>
+            <%= pkt.sums["Nein"][:perc]  |> format_price() %>%
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Stimmenthaltung"]) do %>
+            <%= pkt.sums["Stimmenthaltung"][:val] %>
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Stimmenthaltung"]) do %>
+            <%= pkt.sums["Stimmenthaltung"][:perc]  |> format_price() %>%
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Ungueltig"]) do %>
+            <%= pkt.sums["Ungueltig"][:val] %>
+        <% end %>
+        </td>
+        <td>
+        <%= if not is_nil(pkt.sums["Ungueltig"]) do %>
+            <%= pkt.sums["Ungueltig"][:perc]  |> format_price() %>%
+        <% end %>
+        </td>
+    </tr>
+
+<% end %>
+</table>

@@ -1,0 +1,133 @@
+.orderhtml {
+
+
+
+    font-size: 16px;
+
+    .is-invoice & {
+        max-width: 40em;
+        @include mx(auto);
+        color: black;
+
+        font-size: 14px;
+        // color: green;
+
+        .order-only {
+            display: none;
+        }
+
+        .invoice-only {
+            display: block;
+        }
+
+        .logo {
+            max-width: 20em;
+            position: relative;
+            left: -.5em;
+        }
+
+        .addressline {
+            text-decoration: underline;
+            font-size: .75em;
+            margin-top: 3em;
+            margin-bottom: 1em;
+        }
+
+        .billing-address-head {
+            margin-bottom: 3em;
+        }
+
+        .footer-address {
+            margin-top: 2em;
+            border-top: 1px solid #eee;
+            white-space: pre-line;
+        }
+
+        .invoice-delivery-addressinfo {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 1em;
+        }
+
+        border:none;
+
+        .notfooter {
+            min-height: 820px;
+        }
+    }
+
+
+    .invoice-only {
+        display: none;
+    }
+
+
+    border: 1px solid #eee;
+    background: white;
+    padding: 1em;
+
+    .order-title {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .lineitems {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        width: 100%;
+        max-width: 700px;
+
+        tr {
+            td {
+                padding: 0.8em;
+
+                &.curr {
+                    text-align: right;
+                    font-size: .8em;
+                }
+
+                .subtitle {
+                    font-size: .8em;
+                }
+            }
+
+            &.lineitem-product td {
+                border-bottom: 1px solid #aaa;
+            }
+
+            &.lineitem-subtotal td,
+            &.lineitem-total td {
+                font-weight: bold;
+            }
+
+            &.lineitem-total_tax {
+                font-size: .8em;
+
+                // td.title {
+                //     text-align: right;
+                // }
+            }
+
+        }
+    }
+
+    .addresses {
+        margin-top: 3em;
+        display: flex;
+
+        >div {
+            flex: 1 1 auto;
+            margin-right: 1em;
+        }
+    }
+
+    .adressinfo {
+        div {
+            margin-bottom: .3em;
+        }
+
+        h4 {
+            margin-bottom: 1em;
+        }
+    }
+}

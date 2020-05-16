@@ -1,0 +1,30 @@
+
+<h1 class="title is-3">Variants </h1>
+
+
+<script>
+function format_price(field) {
+  return window.number_format("###,###,###.", field.value);
+}
+
+</script>
+
+<div id="app" 
+    data-route="/generic"  
+    data-table="variant"
+    data-dataview="list_all"
+    data-extend-coldefs='[
+      { field: "source_price",  formatter: "format_price",cellClass: "align-right" },
+      { field: "price1",  formatter: "format_price",cellClass: "align-right" },
+      { field: "price2",  formatter: "format_price",cellClass: "align-right" },
+      { field: "price3",  formatter: "format_price",cellClass: "align-right" },
+      { field: "price4",  formatter: "format_price",cellClass: "align-right" },
+    ]'
+
+    ></div>
+    <script src="<%= vue_cli(@conn, "/engine/datagrid/js/chunk-vendors.js") %>">
+    </script>
+    <script src="<%= vue_cli(@conn, "/engine/datagrid/js/app.js") %>">
+    </script>
+  </div>
+</div>

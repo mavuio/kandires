@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= csrf_meta_tag() %>
+
+  <title><%= get_page_title(@conn) %></title>
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/frontend/styles.css") %>" />
+
+  <script src="https://kit.fontawesome.com/22b173a768.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+
+</head>
+
+<body class="page <%= body_classes(@conn) %>">
+
+  <header>
+    <div class="outer">
+      <div class="inner">
+        <div class="col-left">
+          <img src="https://oberoesterreich.naturfreunde.at/mysite/img/portal_logos/oberoesterreich.png" class="logo">
+        </div>
+        <div class="col-middle">
+          <%= if not is_nil(assigns[:checkout_record]) and @checkout_record[:mglnr] do %>
+
+
+          <%=  @checkout_record.fullname %> &nbsp;
+          <%= link "ausloggen", to: Kandis.Checkout.get_link_for_step(@conn,:logout) %>
+          <% end %>
+        </div>
+
+        <div class="col-right">
+          <frontend-cart_icon class="vueapp-frontend" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <div class="main-content">
+    <div class="backend-wrap">
+      <%= if get_flash(@conn, :info) do %>
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <% end %>
+      <%= if not is_nil(get_flash(@conn, :warning)) and (not String.ends_with?( get_flash(@conn, :warning),"cart is empty")) do %>
+      <p class="alert alert-warning" role="alert"><%= get_flash(@conn, :warning) %></p>
+      <% end %>
+      <%= if get_flash(@conn, :error) do %>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <% end %>
+      <%= render @view_module, @view_template, assigns %>
+    </div>
+  </div>
+  <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+
+</body>
+
+</html>

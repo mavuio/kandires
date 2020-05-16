@@ -1,0 +1,14 @@
+<h1 class="title is-3">process Upload #<%= @upload.id %> </h1>
+
+
+
+<div>&nbsp;</div>
+
+<%= form_for @conn, Routes.upload_path(@conn, :process_upload_run,@upload.id), [], fn f-> %>
+
+    <%= hidden_input f, :dummy , value: "abc"%>
+
+
+    <%= submit "➜ Start Processing", class: "button is-primary" %>
+
+<% end %>

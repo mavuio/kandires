@@ -1,0 +1,6 @@
+yarn --cwd apps/kandires_web/assets deploy
+
+yarn --cwd mysite gulp
+
+
+COPY members(fullname,mglnr,gender) FROM '/tmp/members.csv' DELIMITER ',' CSV HEADER;

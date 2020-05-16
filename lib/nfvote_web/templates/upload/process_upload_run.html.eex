@@ -1,0 +1,8 @@
+<h1 class="title is-3">processing Upload #<%= @upload.id %> </h1>
+
+<div>&nbsp;</div>
+Filename: <%= @upload.filename %>
+
+ res: <div style="white-space: pre-wrap">
+     <%= Jason.encode!(@res, pretty: true) %> 
+ </div>

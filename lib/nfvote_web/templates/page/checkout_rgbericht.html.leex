@@ -1,0 +1,61 @@
+<div class="checkout-wrap">
+
+  <h2>1/4 Bericht der RechnungsprüferInnen zur Landeskonferenz</h2>
+
+  <%= f = form_for @changeset, "#", [as: :step_data, phx_change: :validate, phx_submit: :save] %>
+
+
+
+
+
+
+
+Bericht der RechnungsprüferInnen zur Landeskonferenz
+<div>&nbsp;</div>
+Berichtszeitraum 2017-2019:
+<div>&nbsp;</div>
+Die RechnungsprüferInnen haben seit der letzten Landeskonferenz 9 Sitzungen
+durchgeführt, an denen neben den ordentlichen Mitgliedern, der Landesgeschäftsführer,
+fallweise auch die zuständigen Mitarbeiter und Mitarbeiterinnen der Landesorganisation
+teilgenommen haben.
+<div>&nbsp;</div>
+Über Umfang und Inhalt der Sitzungen wurden Protokolle verfasst.
+<div>&nbsp;</div>
+Gegenstand der Prüfungen waren die Kassen- und Bankbelege sowie Eingangs- und
+Ausgangsrechnungen der Landesorganisation und der einzelnen Referate, die
+stichprobenweise kontrolliert wurden. Ebenso wurden die Jahresabschlüsse der letzten drei
+Jahre der Landesorganisation eingesehen.
+<div>&nbsp;</div>
+Sämtliche Überprüfungen ergaben keine Beanstandungen. Vorschläge und Empfehlungen
+seitens der RechnungsprüferInnen wurden positiv zur Kenntnis genommen und nach
+Möglichkeit umgesetzt.
+<div>&nbsp;</div>
+Die RechnungsprüferInnen möchten sich ausdrücklich bei den Mitarbeiterinnen und
+Mitarbeiter der Landesorganisation, dem Landesgeschäftsführer und der Finanzreferentin
+für die gute Zusammenarbeit bedanken.
+<div>&nbsp;</div>
+In diesem Sinne stellen die RechnungsprüferInnen an die Delegierten der Landeskonferenz
+den
+<div>&nbsp;</div>
+<b>Antrag</b>,<br>
+der Landesfinanzreferentin sowie dem Präsidium und Vorstand die Entlastung zu erteilen.
+<div>&nbsp;</div>
+Sabine Hinum<br>
+Vorsitzende der RechnungsprüferInnen
+
+<div>&nbsp;</div>
+
+<%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_01_01}) %>
+
+
+
+
+
+
+
+
+  <div class="step-nav">
+      <button class="btn btn-primary" type="submit"><i class='fal fa-chevron-right'></i>&nbsp; weiter  </button>  </div>
+  </form>
+
+</div>

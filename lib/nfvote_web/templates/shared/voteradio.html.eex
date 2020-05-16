@@ -1,0 +1,16 @@
+<div class="voteradio
+
+<%= if @f.errors |> Keyword.get_values(@field)  |> length() > 0 do %>
+  has-errors
+<% end %>">
+    <div>
+        <%= standalone_error_tag(@f, @field,  input_id(@f, @field)<>"_Ja") %>
+    </div>
+
+    <label><%= radio_button @f, @field, "Ja", class: "ad-none" %>Ja</label>&nbsp;
+    <label><%= radio_button @f, @field, "Nein", class: "ad-none" %>Nein</label>&nbsp;
+    <label><%= radio_button @f, @field, "Stimmenthaltung", class: "ad-none" %>Stimmenthaltung</label>
+    <label><%= radio_button @f, @field, "Ungueltig", class: "ad-none" %>Ungültig</label>
+
+</div>
+

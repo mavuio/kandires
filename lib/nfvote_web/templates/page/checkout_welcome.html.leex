@@ -1,0 +1,42 @@
+<div class="checkout-wrap">
+
+
+
+
+
+<h2>
+  <%= if @checkout_record.gender == "m" do %>
+  Lieber
+  <% else %>
+   Liebe
+  <% end %>
+   <%=  @checkout_record.fullname %>
+</h2>
+
+
+<div>&nbsp;</div>
+herzlich Willkommen bei unserer digitalen Landeskonferenz. Du hast die Möglichkeit, im Zeitraum 5. bis 12. Mai 2020 hier online deine Stimme abzugeben.
+
+
+<div>&nbsp;</div>
+Vielen Dank für deine wertvolle Unterstützung und für deine Mitarbeit bei den Naturfreunden.
+
+
+<div>&nbsp;</div>
+Ein herzliches „Berg Frei!“
+<div>&nbsp;</div>
+Deine Naturfreunde Landesorganisation OÖ
+
+
+
+
+
+
+
+  <div class="step-nav">
+      <a class="btn btn-primary" href="<%=   Kandis.Checkout.get_next_step_link(assigns , @step) %>"><i
+        class='fal fa-chevron-right'></i>&nbsp; weiter zur Stimmabgabe   </a>
+
+  </div>
+
+</div>

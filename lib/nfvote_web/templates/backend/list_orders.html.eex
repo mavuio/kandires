@@ -1,0 +1,55 @@
+<h1 class="title">
+    Teilnehmer
+</h1>
+
+<!-- <%= @orders |> Enum.count() %> -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>mglnr</th>
+            <th>Abstimmung</th>
+            <th>created</th>
+
+            <th class="pkt"><div>1.1: Bericht der RechnungsprüferInnen</div></th>
+            <th class="pkt"><div>2.1: Landesvorsitzende</div></th>
+            <th class="pkt"><div>2.2: Vorsitzende – Stv.</div></th>
+            <th class="pkt"><div>2.3: Finanzreferent</div></th>
+            <th class="pkt"><div>2.4: Finanzreferent – Stv.</div></th>
+            <th class="pkt"><div>2.5: Schriftführer</div></th>
+            <th class="pkt"><div>2.6: Schriftführer – Stv.</div></th>
+            <th class="pkt"><div>2.7: Rechnungsprüfer</div></th>
+            <th class="pkt"><div>2.8: Gebietsvorsitzende</div></th>
+            <th class="pkt"><div>2.9: Referate</div></th>
+            <th class="pkt"><div>2.10: Schiedsgericht</div></th>
+            <th class="pkt"><div>2.11: Nationalpark Kalkalpen</div></th>
+            <th class="pkt"><div>2.12: Entsendung in die BU</div></th>
+            <th class="pkt"><div>3.1: Mglbeitrag ältere Mitglieder</div></th>
+            <th class="pkt"><div>4.1: Resolution zum Klimaschutz </div></th>
+
+        </tr>
+    </thead>
+    <%= for o <- @orders do %>
+    <tr>
+        <td><%= o.id %></td>
+        <td> <%= o.cart_id %> </td>
+         <td><%= o.orderinfo["fullname"]  %> </td>
+
+        <td><a href="<%= Routes.backend_path(@conn,:show_order, o.order_nr) %>"><%= o.order_nr %></a></td>
+        <td><%= o.inserted_at  |> local_date() %></td>
+        <%= for li <- o.orderdata["lineitems"] do %>
+            <td class="pkt">
+            <%= case li["result"] do
+                "Ja"-> "<i class='fas fa-plus'></i>"
+                "Nein"-> "<i class='fas fa-minus'></i>"
+                "Ungueltig"-> "<i class='fal fa-times'></i>"
+                "Stimmenthaltung"-> "<i class='fas fa-tilde'></i>"
+                _ -> "&nbsp;"
+            end  |> raw() %>
+            </td>
+        <% end %>
+
+    </tr>
+    <% end %>
+</table>

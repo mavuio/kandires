@@ -1,0 +1,14 @@
+login
+
+
+
+<%= form_for @changeset, Routes.login_path(@conn, :login), [], fn f-> %>
+
+    <%= bs_input f, :mglnr , value: "abc"%>
+
+
+    <%= submit "Login", class: "button is-primary" %>
+
+
+<% end %>
+

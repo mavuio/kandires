@@ -1,0 +1,13 @@
+
+<h1 class="title is-3">
+    upload new file of type '<%= @type %>'
+</h1>
+
+<%= form_for @conn, Routes.upload_path(@conn, :create, @type), 
+                    [multipart: true], fn f-> %>
+
+    <%= file_input f, :upload, class: "input" %>
+    <div>&nbsp;</div>
+    <%= submit "Upload", class: "button is-primary" %>
+
+<% end %>

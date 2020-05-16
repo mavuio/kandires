@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+@import "partials/fonts";
+
+@import "partials/variables";
+
+@import "partials/partial_bootstrap";
+
+@import "partials/mixins";
+
+@import "partials/contentelements";
+
+@import "partials/checkout";
+
+@import "partials/orderhtml";
+
+.typography {
+  @import "partials/typography";
+}
+
+body {
+  background-color: $c-pagebg;
+  font-family: $ff-copy;
+}
+
+body.c-session,
+body.c-registration,
+body.c-invitation,
+body.c-reset_password {
+  .main-content {
+    margin-top: 10em;
+    max-width: 30rem;
+    @include mx(auto);
+  }
+}
+
+header {
+
+  @media print {
+    display: none;
+  }
+
+  margin-bottom: 1em;
+  padding: 1em;
+  background: $c-lightgreen;
+
+  .logo {
+    max-height: 80px;
+  }
+
+  .outer {
+    @include ce_outer();
+
+    .inner {
+      display: flex;
+      justify-content: stretch;
+
+      >* {
+        flex: 1 1 auto;
+        // border: 1px solid red;
+      }
+
+      .col-middle {
+        text-align: right;
+        flex-basis: 5rem;
+      }
+
+      .col-right {
+        text-align: right;
+        max-width: 5rem;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+
+  .left-col {
+    flex: 0 0 14em;
+    padding-right: 1em;
+  }
+
+  .main-col {
+    flex: 1 1 auto;
+  }
+}

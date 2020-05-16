@@ -1,0 +1,53 @@
+
+<h1 class="title is-3">Products </h1>
+
+
+<style>
+.tinyimg{
+  max-height:20px;
+  width:auto;
+}
+</style>
+
+<script>
+function imgcol(params) {
+  
+  console.log(`#log 6725`,params);
+
+  if(params.data.cached_img_urls) {
+    let imgtags=params.data.cached_img_urls.map( url => `<img class="tinyimg" src="${url}">`)    
+    return imgtags.join(" ");
+  }
+  return 'n/a';
+
+//  return `<a href="${url.replace('999',params.data.id)}">➜ ${params.data.id}</a>`;
+}
+</script>
+
+<div id="app" 
+    data-route="/generic"  
+    data-table="prod"
+    data-dataview="list_all"
+    data-coldefs='[
+      {field: "path", enableRowGroup: true, rowGroup: true},
+      {field: "id"},
+      {field: "title"},
+      {field: "text"},
+      {field: "brand"},
+      {field: "sku"},
+      {field: "url"},
+      {field: "cached_img_urls", renderer: "imgcol" }
+      {field: "source_type"},
+      {field: "upload_id"},
+      {field: "updated_at"},
+      {field: "inserted_at"},
+
+    ]'
+
+    ></div>
+    <script src="<%= vue_cli(@conn, "/engine/datagrid/js/chunk-vendors.js") %>">
+    </script>
+    <script src="<%= vue_cli(@conn, "/engine/datagrid/js/app.js") %>">
+    </script>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="checkout-wrap">
+
+  <h2>Übersicht</h2>
+
+
+  Hier nochmal zur Kontrolle, alle Abstimmungs-Punkte gesammelt:
+
+
+  <div>&nbsp;</div>
+
+    <%= raw(@orderhtml) %>
+
+  <div>&nbsp;</div>
+
+  <%= f = form_for @changeset, "#", [as: :step_data, phx_change: :validate, phx_submit: :save,onkeypress: "return event.keyCode != 13;"] %>
+
+
+  <div class="step-nav">
+      <a class="btn btn-outline-primary" href="<%=   Kandis.Checkout.get_prev_step_link(assigns , @step) %>"><i
+        class='fal fa-chevron-left'></i>&nbsp; zurück </a>
+
+    <button class="btn btn-primary" type="submit"><i class='fal fa-chevron-right'></i>&nbsp;Abstimmung absenden</button> </div>
+  </form>
+
+</div>

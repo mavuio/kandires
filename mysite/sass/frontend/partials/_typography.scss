@@ -1,0 +1,61 @@
+p,
+ul,
+ol {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    // font-size: $fs-copy;
+    line-height: $lh-copy;
+}
+
+ul,
+ol {
+    padding-inline-start: 0;
+    padding-left: 1em;
+}
+
+
+ul>li {
+    margin-bottom: 0.5em;
+}
+
+
+p.highlighted {
+    font-style: italic;
+}
+
+h2,
+h3,
+h4 {
+    padding-top: 0;
+    padding-bottom: 0.75em;
+    margin: 0;
+}
+
+h1 {
+    font-family: $ff-h1;
+    font-size: $fs-h1;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: $ff-h2;
+    font-size: $fs-h2;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: $ff-h3;
+    font-size: $fs-h3;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: $ff-h4;
+    font-size: $fs-h4;
+    font-weight: normal;
+}
+
+
+a {
+    text-decoration: underline;
+}

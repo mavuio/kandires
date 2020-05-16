@@ -1,0 +1,55 @@
+$c-red: #651D32;
+
+$c-black: #000;
+$c-darkgrey: #3E3D3D;
+$c-grey: #878787;
+$c-lightgrey: #ccc;
+$c-white: #fff;
+
+
+
+$c-green:#54af2e;
+$c-lightgreen:#e9f2e1;
+$c-red:#E74C05;
+$c-lightred:lighten($c-red, 30%);
+$c-panegreen:#E6F2E1;
+$c-darkgreen:#2F4F0D;
+$c-bg:#fff;
+$c-cartgreen:#1b460d;
+
+
+$c-pagebg: $c-white;
+
+$theme-colors: ("primary": $c-green,
+    "danger": $c-red);
+
+
+$ff-copy: Helvetica,
+Arial,
+sans-serif;
+$fs-copy: 1em;
+$lh-copy: 1.6;
+
+$ff-headline:$ff-copy;
+
+$fs-h1: $fs-copy*3;
+$fs-h2: $fs-copy*1.4;
+$fs-h3: $fs-copy*1.2;
+$fs-h4: $fs-copy*1;
+
+
+$ff-h1: $ff-headline;
+$ff-h2: $ff-headline;
+$ff-h3: $ff-headline;
+$ff-h4: $ff-headline;
+
+$rfs-breakpoint:2000px;
+
+$rfs-factor: 90;
+
+$rfs-base-value: 0.8rem;
+
+
+$w-col:88px;
+
+$w-col-pad:12px;

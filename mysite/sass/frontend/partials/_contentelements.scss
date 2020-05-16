@@ -1,0 +1,6 @@
+.container {
+
+    max-width: 60rem;
+    @include mx(auto);
+    // @include make-container($gutter: 2rem);
+}

@@ -1,0 +1,36 @@
+<div class="checkout-wrap">
+
+  <h2>3/4 Antrag: Verringerung des Mitgliedsbeitrages für ältere Mitglieder</h2>
+
+  <%= f = form_for @changeset, "#", [as: :step_data, phx_change: :validate, phx_submit: :save] %>
+
+
+Alle 28 Ortsgruppen der Gebietsgruppe Mühlviertel stellen an die Landeskonferenz folgenden Antrag:
+<div>&nbsp;</div>
+Viele Naturfreundemitglieder sind schon in einem Lebensabschnitt, wo sie nicht mehr an den Aktivitäten der Ortsgruppe teilnehmen können. Sie bleiben uns aber aufgrund ihrer langjährigen Mitgliedschaft treu. Trotzdem verlassen uns immer wieder diese treuen Mitglieder, weil sie nicht den vollen Mitgliedsbeitrag leisten wollen, da sie nicht die Vorteile einer Mitgliedschaft nutzen können.
+<div>&nbsp;</div>
+Wir schlagen daher vor, diesen Mitgliedern einen geringeren Mitgliedsbeitrag - eventuell analog dem Jugendbeitrag - zu gewähren. Dies könnt ab einem Lebensalter von 70 Jahren oder 75 Jahren sein.
+<div>&nbsp;</div>
+Die Landeskonferenz möge diesen Antrag beschließen und an die Bundeskonferenz weiterleiten
+
+
+
+<div>&nbsp;</div>
+
+<%= render_shared "voteradio.html", Map.merge(assigns,%{f: f, field: :pkt_03_01}) %>
+
+
+
+
+
+
+
+
+  <div class="step-nav">
+      <a class="btn btn-outline-primary" href="<%=   Kandis.Checkout.get_prev_step_link(assigns , @step) %>"><i
+        class='fal fa-chevron-left'></i>&nbsp; zurück </a>
+
+      <button class="btn btn-primary" type="submit"><i class='fal fa-chevron-right'></i>&nbsp; weiter  </button>  </div>
+  </form>
+
+</div>

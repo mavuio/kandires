@@ -1,0 +1,33 @@
+
+<div class="adressinfo">
+
+<%= if assigns[:title] do %>
+  <h4>
+      <%= @title %>
+  </h4>
+
+<% end %>
+
+    <div>
+    	<%= @first_name %> <%= @last_name %>
+    </div>
+    <%= if assigns[:company] do %>
+        <div>
+            <%= @company %>
+        </div>
+    <% end %>
+
+    <%= if assigns[:phone] do %>
+        <div>
+            <%= @phone %>
+        </div>
+    <% end %>
+    <div>&nbsp;</div>
+
+    <div>
+        <%= @street %>
+    </div>
+    <div>
+        <%= @zip %> <%= @city %>
+    </div>
+</div>

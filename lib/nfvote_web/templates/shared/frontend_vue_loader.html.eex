@@ -1,0 +1,11 @@
+
+
+
+<script>
+window.vueAppConf='{"dummy":"covid19"}';
+</script>
+<script src="<%= vue_cli(@conn, "/engine/frontend/js/chunk-vendors.js") %>">
+</script>
+<script src="<%= vue_cli(@conn, "/engine/frontend/js/app.js") %>">
+</script>
+

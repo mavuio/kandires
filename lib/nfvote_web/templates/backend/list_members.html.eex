@@ -1,0 +1,25 @@
+<h1 class="title">
+    Wahlberechtigte
+</h1>
+
+<!-- <%= @orders |> Enum.count() %> -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>mglnr</th>
+            <th>gender</th>
+            <th>created</th>
+        </tr>
+    </thead>
+    <%= for o <- @members do %>
+    <tr>
+        <td><%= o.id %></td>
+        <td> <%= o.fullname %> </td>
+         <td><%= o.mglnr  %> </td>
+         <td><%= o.gender  %> </td>
+    </tr>
+
+    <% end %>
+</table>
