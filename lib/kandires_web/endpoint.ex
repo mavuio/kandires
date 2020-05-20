@@ -4,7 +4,9 @@ defmodule KandiresWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_kandires_web_key",
-    signing_salt: "KK1GvsI3"
+    signing_salt: "KK1GvsI3",
+    extra: "SameSite=None",
+    secure: true
   ]
 
   socket("/socket", KandiresWeb.UserSocket,
@@ -79,7 +81,7 @@ defmodule KandiresWeb.Endpoint do
   plug(PowPersistentSession.Plug.Cookie)
 
   plug(CORSPlug,
-    origin: ["https://kandires.werkzeugh.at.test", "https://nfvote.werkzeugh.at.test"]
+    origin: &KandiresWeb.EmbedView.cors_hosts/1
   )
 
   plug(KandiresWeb.Router)

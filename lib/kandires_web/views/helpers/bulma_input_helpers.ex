@@ -6,16 +6,16 @@ defmodule KandiresWeb.BulmaInputHelpers do
   def bulma_input(form, field, opts \\ []) do
     type = Phoenix.HTML.Form.input_type(form, field)
 
-    wrapper_opts = [class: "field"]
-    control_opts = [class: "control"]
-    label_opts = [class: "label"]
+    wrapper_opts = [class: "bu-field"]
+    control_opts = [class: "bu-control"]
+    label_opts = [class: "bu-label"]
 
     # input_opts = [class: "form-control"]
 
     input_opts =
       put_in(
         opts[:class],
-        String.trim("input #{input_state_class(form, field)} #{opts[:class]}")
+        String.trim("bu-input #{input_state_class(form, field)} #{opts[:class]}")
       )
 
     content_tag :div, wrapper_opts do
@@ -36,7 +36,7 @@ defmodule KandiresWeb.BulmaInputHelpers do
         ""
 
       form.errors[field] ->
-        "is-danger"
+        "bu-is-danger"
 
       # ""
 

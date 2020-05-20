@@ -8,7 +8,6 @@ defmodule KandiresWeb.EmbedController do
   def step(conn, params) do
     module_name = get_module_name(params["step"])
 
-    params |> IO.inspect(label: "mwuits-debug 2020-05-20_07:43 ")
     conn = put_layout(conn, false)
 
     live_render(conn, module_name,

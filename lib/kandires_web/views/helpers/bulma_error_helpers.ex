@@ -20,7 +20,7 @@ defmodule KandiresWeb.BulmaErrorHelpers do
     |> Keyword.get_values(field)
     |> Enum.map(fn error ->
       content_tag(:p, translate_error(error),
-        class: "help is-danger",
+        class: "bu-help bu-is-danger",
         data: [phx_error_for: input_id(form, field)]
       )
     end)
@@ -40,7 +40,7 @@ defmodule KandiresWeb.BulmaErrorHelpers do
   @doc """
   Translates an error message using gettext.
   """
-  def translate_error({msg, opts}) do
+  def translate_error({msg, _opts}) do
     "#{msg}"
     # When using gettext, we typically pass the strings we want
     # to translate as a static argument:
