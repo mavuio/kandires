@@ -844,6 +844,11 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+alpinejs@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-2.3.5.tgz#f077d535979cc7e565d8af3365779cee3b5246e1"
+  integrity sha512-/zQiqmiM3gBVKD+yeP7p9XzOXfhxxDMAfoaJRpXiAJykGaeSe3L+bvp/a6uRQMygPV+UUdgAk8fdfToJttRcUQ==
+
 ansi-escapes@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.2.0.tgz#8780b98ff9dbf5638152d1f1fe5c1d7b4442976b"
@@ -5238,7 +5243,7 @@ pbkdf2@^3.0.3:
   version "1.4.17"
 
 "phoenix_html@file:../deps/phoenix_html":
-  version "2.14.1"
+  version "2.14.2"
 
 "phoenix_live_view@file:../deps/phoenix_live_view":
   version "0.12.1"

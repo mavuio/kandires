@@ -41,10 +41,12 @@ defmodule Kandires.MixProject do
   # and cannot be accessed from applications inside the apps folder
   defp deps do
     [
-      {:phoenix, "~> 1.4.0"},
+      {:phoenix, path: "deps/phoenix", override: true},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:phoenix_html, "~> 2.11"},
+      {:cors_plug, "~> 1.5"},
+      {:phoenix_live_view, path: "deps/phoenix_live_view", override: true},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
@@ -78,7 +80,8 @@ defmodule Kandires.MixProject do
       {:exi18n, "~> 0.8.0"},
       {:yaml_elixir, "~> 1.3.0"},
       {:tzdata, "~> 1.0.1"},
-      {:loggix, "~> 0.0.7"}
+      {:loggix, "~> 0.0.7"},
+      {:timex, "~> 3.5"}
     ]
   end
 

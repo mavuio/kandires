@@ -1,0 +1,16 @@
+  <div class="kandires">
+    <%= csrf_meta_tag() %>
+
+        <%= if live_flash(@flash, :info) do %>
+        <p class="alert alert-info" role="alert"><%= live_flash(@flash, :info) %></p>
+        <% end %>
+        <%= if live_flash(@flash, :warning)  do %>
+        <p class="alert alert-warning" role="alert"><%= live_flash(@flash, :warning) %></p>
+        <% end %>
+        <%= if live_flash(@flash, :error) do %>
+        <p class="alert alert-danger" role="alert"><%= live_flash(@flash, :error) %></p>
+        <% end %>
+
+      <%= @inner_content %>
+
+  </div>

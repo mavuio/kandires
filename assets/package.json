@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@webcomponents/template": "^1.4.2",
+    "alpinejs": "^2.3.5",
     "bulma": "^0.7.2",
     "child-replace-with-polyfill": "^1.0.1",
     "classlist-polyfill": "^1.2.0",

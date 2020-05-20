@@ -56,17 +56,17 @@ config :logger, :mix_application_log,
 config :kandis,
   repo: Kandires.Repo,
   pubsub: KandiresWeb.PubSub,
-  local_checkout: KandiresWeb.Shop.LocalCheckout,
-  local_cart: KandiresWeb.Shop.LocalCart,
-  local_order: KandiresWeb.Shop.LocalOrder,
+  local_checkout: KandiresWeb.Reservation.LocalCheckout,
+  local_cart: KandiresWeb.Reservation.LocalCart,
+  local_order: KandiresWeb.Reservation.LocalOrder,
   server_view: KandiresWeb.ServerView,
-  order_record: KandiresWeb.Shop.OrderRecord,
+  order_record: KandiresWeb.Reservation.OrderRecord,
   translation_function: &KandiresWeb.MyHelpers.t/3,
   get_pdf_template_url: &KandiresWeb.MyHelpers.get_pdf_template_url/3,
   invoice_nr_prefix: "EBS",
   invoice_nr_testprefix: "EBT",
-  steps_module_path: "KandiresWeb.Shop.Checkout.Steps",
-  payments_module_path: "KandiresWeb.Shop.Payments",
+  steps_module_path: "KandiresWeb.Reservation.Checkout.Steps",
+  payments_module_path: "KandiresWeb.Reservation.Payments",
   pdf_dir: "/www/kandires/pdfs",
   pdf_url: "/pdfs"
 
@@ -78,6 +78,11 @@ config :exi18n,
   loader_options: %{path: "priv/locales"},
   var_prefix: "%{",
   var_suffix: "}"
+
+# config :cors_plug,
+#   origin: ["https://kandires.werkzeugh.at.test", "https://nfvote2.werkzeugh.at.test"],
+#   max_age: 86400,
+#   methods: ["GET", "POST"]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

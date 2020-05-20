@@ -1,0 +1,17 @@
+<div>
+STEP 1 choose3 ...
+
+
+  <%= f = form_for @changeset, "#", [as: :step_data, phx_change: :validate, phx_submit: :save] %>
+
+
+  <%= bulma_input f, :info , label: "info" %>
+
+
+
+  <button class="button" type="submit"> ok</button>
+
+</form>
+
+
+</div>

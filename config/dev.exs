@@ -56,6 +56,8 @@ config :kandires, KandiresWeb.Endpoint,
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
+      ~r{lib/kandires_web/live/.*(leex)$},
+      ~r{lib/kandires_web/steps/.*(leex|ex)$},
       ~r{lib/kandires_web/views/.*(ex)$},
       ~r{lib/kandires_web/templates/.*(eex)$}
     ]

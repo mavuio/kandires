@@ -1,0 +1,29 @@
+<div class="calendarbox">
+  <div class="calendar-header">
+    <a href="#" phx-click="prev-month" phx-target="<%= @myself %>" class=""><i class='fas fa-chevron-left'></i></a>
+    <span><%= Timex.format!(@current_month, "%B %Y", :strftime) %></span>
+    <a href="#" phx-click="next-month" phx-target="<%= @myself %>" class=""><i class='fas fa-chevron-right'></i></a>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <%= for day_name <- @day_names do %>
+        <th>
+          <%= day_name %>
+        </th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for week <- @week_rows do %>
+      <tr>
+        <%= for day <- week do %>
+        <%= live_component @conn, KandiresWeb.CalendarDayComponent, target: @myself, day: day, current_date: @current_date,current_month: @current_month %>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

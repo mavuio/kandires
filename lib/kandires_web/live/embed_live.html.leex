@@ -1,0 +1,33 @@
+<div>
+
+
+
+
+
+  <div id='<%= if connected?(@socket), do: "connected-calendar", else: "not-connected-calendar" %>'
+    x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false">
+
+
+
+
+    <div class="select">
+      <select>
+        <%= for n <- 1..4 |> Enum.take(100) do %>
+            <option><%= n %>Personen</option>
+        <% end %>
+      </select>
+    </div>
+
+    <button @click="open = !open" type="button" class="button">
+      toggle
+    </button>
+
+    <div x-show="open" class="calendar-wrapper" x-transition:enter="t-enter" x-transition:enter-start="t-enter-start"
+      x-transition:enter-end="t-enter-end " x-transition:leave="t-leave" x-transition:leave-end="t-leave-end">
+      <%= live_component @conn, KandiresWeb.CalendarComponent, id: :reservation_day %>
+    </div>
+
+  </div>
+
+
+</div>
