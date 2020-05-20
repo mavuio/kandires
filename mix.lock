@@ -33,7 +33,7 @@
   "httpoison": {:hex, :httpoison, "1.6.2", "ace7c8d3a361cebccbed19c283c349b3d26991eff73a1eaaa8abae2e3c8089b6", [:mix], [{:hackney, "~> 1.15 and >= 1.15.2", [hex: :hackney, repo: "hexpm", optional: false]}], "hexpm", "aa2c74bd271af34239a3948779612f87df2422c2fdcfdbcec28d9c105f0773fe"},
   "idna": {:hex, :idna, "6.0.0", "689c46cbcdf3524c44d5f3dde8001f364cd7608a99556d8fbd8239a5798d4c10", [:rebar3], [{:unicode_util_compat, "0.4.1", [hex: :unicode_util_compat, repo: "hexpm", optional: false]}], "hexpm", "4bdd305eb64e18b0273864920695cb18d7a2021f31a11b9c5fbcd9a253f936e2"},
   "jason": {:hex, :jason, "1.1.2", "b03dedea67a99223a2eaf9f1264ce37154564de899fd3d8b9a21b1a6fd64afe7", [:mix], [{:decimal, "~> 1.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "fdf843bca858203ae1de16da2ee206f53416bbda5dc8c9e78f43243de4bc3afe"},
-  "kandis": {:git, "https://github.com/werkzeugh/kandis.git", "97ed4b85e4049f203d791d498553a460fbed6df2", [tag: "0.1.5"]},
+  "kandis": {:git, "https://github.com/werkzeugh/kandis.git", "3af7d24b5c0e2342a7cb1ea4fc4de0032fd01193", [tag: "0.3.14"]},
   "loggix": {:hex, :loggix, "0.0.9", "27ac388bd0b0ac23b110a075be353559258b201dcb0abbf75cc83ce6019ccdea", [:mix], [], "hexpm", "184433129452efda7af06d3a8c96d1d7e1146cc6373fa30e0d41f0b7b4860bf4"},
   "maybe": {:hex, :maybe, "1.0.0", "65311dd7e16659579116666b268d03d7e1d1b3da8776c81a6b199de7177b43d6", [:mix], [], "hexpm", "23277767c0383ee6a9cb68f7e2fe0f6dfb91f01748e2c9a6439c95f2f6b52c57"},
   "memoize": {:hex, :memoize, "1.3.0", "c82eaf40cd2afd0cc050ee0d7e6b298aa2a0d5faa8680b48147deecb4b94300d", [:mix], [], "hexpm", "e7821b08820b39f090c8a2a321c639068fd11690d0477a5a32d477696329058e"},

@@ -18,8 +18,6 @@ config :kandires,
 config :kandis,
   local_url: "https://kandires.werkzeugh.at"
 
-import_config "prod.secret.exs"
-
 config :kandires, KandiresWeb.Endpoint,
   # Possibly not needed, but doesn't hurt
   http: [port: {:system, "PORT"}],
