@@ -51,6 +51,11 @@ let conf = {
 
   let appdiv = document.getElementById("kandires");
 
+  const host = appdiv.getAttribute('data-host');
+  if (host) {
+    conf.host = host;
+  }
+
   let baseurl = `https://${conf.host}`;
 
 
